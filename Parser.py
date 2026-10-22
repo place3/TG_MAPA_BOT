@@ -1,3 +1,4 @@
+import os
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 import requests
@@ -65,7 +66,7 @@ def get_attractionss(ur_city):
     return list(zip(txt_list, img_list, name_list))
 
 def get_weather(cords):
-    api_key = "1ee9e1f690d70f0e1f698bc16e67667e"  # мой api ключ для openweather
+    api_key = os.environ["OPENWEATHER_API_KEY"]
     url = f'https://api.openweathermap.org/data/2.5/weather?lat={cords[0]}&lon={cords[1]}&appid={api_key}&units=metric'
     try:
         print('ff')
