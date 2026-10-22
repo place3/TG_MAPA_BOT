@@ -1,3 +1,6 @@
-# AIOGRAM__TOKEN='6204621723:AAEUYJCgeHpD8GlBftuZgyS091P9SImHvMU'
-AIOGRAM__TOKEN='5852495183:AAFrjebBIJNPGrhKsaMBdiZawuevuNNQQXI' #Проект
-api_key = "1ee9e1f690d70f0e1f698bc16e67667e"
+"""Local credentials are supplied through environment variables."""
+
+import os
+
+AIOGRAM__TOKEN = os.environ["BOT_TOKEN"]
+api_key = os.environ.get("API_KEY", "")
